@@ -1,0 +1,17 @@
+.jumbotron {
+    margin-bottom: 0px;
+    background-image: url(http://www.huskydoglovers.com/wp-content/uploads/2016/05/Day-out-for-the-Four-Legged.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(202, 174, 49);
+    text-shadow: black 0.3em 0.3em 0.3em;
+}
+
+.display-4 {
+    font-weight: 900;
+}
+
+.lead {
+    font-weight: bold;
+}
