@@ -8,7 +8,8 @@ console.log(dogs);
 
     app.post("/api/friends", function (req, res) {
         console.log('in api friends', req.body);
-        
+
+//Start matching equation
         var userInput = req.body;
         var userScores = userInput.scores;
 
