@@ -1,12 +1,13 @@
 var dogs = require("../data/friends.js")
 
 module.exports = function (app) {
-
+console.log(dogs);
     app.get('/api/friends', function (req, res) {
         res.json(dogs);
     });
 
     app.post("/api/friends", function (req, res) {
+        console.log('in api friends', req.body);
         
         var userInput = req.body;
         var userScores = userInput.scores;

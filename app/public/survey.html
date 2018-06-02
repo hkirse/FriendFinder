@@ -211,10 +211,16 @@
                     console.log(newFriend)
                     var currentURL = window.location.origin;
                     //AJAX posts the data to friends API
-                    $.post(currentURL + '/api/friends', newFriend, function (data) {
-                        //SHOULD BE POPULATING POP UP BOX WITH AJAX CALL
-                        $('#match-name').text(data.bestMatchName);
-                        $('#pic').attr("src", data.bestMatchPhoto);
+                    $.ajax({
+                        url:
+                        currentURL + '/api/friends',
+                        type: 'POST',
+                        data: JSON.stringify(newFriend),
+                        contentType: 'application/json; charset=utf-8',
+                        success: function (data) {
+                            console.log(data);
+                            $('#match-name').text(data.bestMatchName); $('#pic').attr("src", data.bestMatchPhoto);
+                        }
                     });
                     $(".modal").modal();
                 }
