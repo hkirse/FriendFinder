@@ -1,63 +1,39 @@
-// Dependencies
-// =============================================================
-var animals = require('../data/friends');
-var path = require("path");
+var dogs = require("../data/friends.js")
 
-module.exports = function(app) {
-  // Friends GET route will be used to display a JSON of all possible friends
-  app.get('/api/friends', function(req, res) {
-      res.json(animals);
-  });
+module.exports = function (app) {
 
-  // Friends post route will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
-  app.post('/api/friends', function(req, res) {
-      animals.push(req.body);
+    app.get('/api/friends', function (req, res) {
+        res.json(dogs);
+    });
 
-      console.log("new dog array:"+ animals);
-       
-      
-          console.log(animals);
-          console.log("------------------------------------");
+    app.post("/api/friends", function (req, res) {
+        
+        var userInput = req.body;
+        var userScores = userInput.scores;
 
-          var user = req.body;
-            
-          var userScores = user.scores;
-          console.log("userScores: " + userScores);
-        //keeps the loop from comparing the user to themselves
-        var loopNum = animals.length - 1;
-          var newAnimal = [];
-          //loops through array of potential friends
-          for (var j = 0; j < loopNum; j++){
-            var totalDifference = 0;
-                var potentialFriend = animals[j].scores;
-                console.log("potential friend scores: " + potentialFriend)
-                    //loops through potential friend's scores to compare 
-                    for (var m = 0; m < userScores.length; m++ ){
-                        totalDifference += Math.abs((userScores[m] - potentialFriend[m]));
-                    };
-                //adds difference from each potential friend to an array
-                newAnimal.push(totalDifference);
-            //end for loop
-          }
+        var bestMatch = {
+            bestMatchName: "",
+            bestMatchPhoto: "",
+            matchScore: 50
+        }
 
-    var matchNum = Math.min.apply(null, newAnimal);
-    console.log("matchNum: " +matchNum);
-    var findMatch = newAnimal.indexOf(matchNum);
-    console.log("findMatch: " +findMatch);
-    var dogName = animals[findMatch].name;
-    var dogImage = animals[findMatch].photo;
+        var scoreDiff = 0;
 
-    console.log("dogName: " +dogName);
+        for (var i = 0; i < dogs.length; i++) {
+            scoreDiff = 0
+            for (var j = 0; j < 10; j++) {
+                scoreDiff = scoreDiff + Math.abs(parseInt(dogs[i].scores[j]) - parseInt(userScores[j]));
+            }
 
-    var dog = {
-        name: dogName,
-        photo: dogImage
-    }
-    
-   
-    res.json(dog);
+            if (scoreDiff < bestMatch.matchScore) {
+                bestMatch.bestMatchName = dogs[i].name;
+                bestMatch.bestMatchPhoto = dogs[i].photo;
+                bestMatch.matchScore = scoreDiff;
+            }
+        };
 
-        // Add current user to friendsArray
-    animals.push(req.body);
-  });
+        dogs.push(userInput);
+        res.json(bestMatch);
+    });
+
 };

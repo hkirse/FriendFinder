@@ -1,31 +1,188 @@
 <!DOCTYPE html>
-
+<html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name=viewport content=”width=device-width, initial-scale=1”>
-    <title>Dog Matcher Survey</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="style/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dog Matcher Survey Questions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="friendFinder.css">
 </head>
 
 <body>
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="jumbotron">
+        <h1 class="display-4">Dog Matcher</h1>
+        <p class="lead">Take a 10 question survey to determine which breed of dog you would enjoy the most!</p>
+        <hr class="my-4">
+        <a class="btn btn-primary btn-lg" href="home.html" role="button">Go to Home Screen</a>
+    </div>
+
+    <div class="container">
+        <h2 class="mt-4">Survey Questions</h2>
+        <hr class="my-4">
+        <form>
+            <h3>About Your dog</h3>
+            <div class="form-group">
+                <label for="name">Name (Required)</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+                <label for="photo">Link to Your Photo (Required)</label>
+                <input type="text" class="form-control" id="photo">
+            </div>
+            <hr class="my-4">
+
+            <div class="form-group">
+                <h4>Question 1</h4>
+                <label for="q1">Would you like your dog to be around 50 - 75 lbs?</label>
+                <select class="form-control" id="q1">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Question 2</h4>
+                <label for="q2">Would you like a really big dog?  Over 100 lbs?</label>
+                <select class="form-control" id="q2">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Question 3</h4>
+                <label for="q3">Would you like to take your dog on long hikes/walks?</label>
+                <select class="form-control" id="q3">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Question 4</h4>
+                <label for="q4">Do you want a dog that loves the water?</label>
+                <select class="form-control" id="q4">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Question 5</h4>
+                <label for="q5">Do you want a very loyal dog?</label>
+                <select class="form-control" id="q5">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Question 6</h4>
+                <label for="q6">I want a very intelligent dog</label>
+                <select class="form-control" id="q6">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Question 7</h4>
+                <label for="q7">Alergies are a consideration</label>
+                <select class="form-control" id="q7">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Question 8</h4>
+                <label for="q8">I want a high energy dog</label>
+                <select class="form-control" id="q8">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Question 9</h4>
+                <label for="q9">I want a social dog</label>
+                <select class="form-control" id="q9">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Question 10</h4>
+                <label for="q10">I want to be around my dog all the time!</label>
+                <select class="form-control" id="q10">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <button type="submit" id="submit-survey" class="btn btn-primary btn-block btn-lg my-4">
+                <span> Submit</span>
+            </button>
+        </form>
+    </div>
+<!-- Why is this not fricken working!!!!!! -->
+    <div class="modal" id="matchModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Here's Your New Best Friend!</h5>
+                    <h4 class="modal-title" id="match-name">Modal title</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-
+                <div class="modal-body mx-auto">
+                    <img id="pic" src='' alt='No Image' width="350px">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -33,266 +190,35 @@
             </div>
         </div>
     </div>
-    <div class="jumbotron">
-        <h1 class="display-4">Dog Matcher</h1>
-        <p class="lead">Take a 10 question survey to determine which breed of dog you would enjoy the most!</p>
-        <hr class="my-4">
-        <a class="btn btn-primary btn-lg" href="home.html" role="button">Go to Home Screen</a>
-    </div>
-    <div class="container">
-        <form>
-            <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Enter your name:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputName" placeholder="Name">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Enter an image URL of yourself:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputImageURL" placeholder="Image URL">
-                </div>
-            </div>
-            <!--/////////Question 1///////////-->
-            <fieldset class="form-group">
-                <div class="row">
-                    <div class="col-sm-12 question1">
-                        <legend class="col-form-label pt-0" id="question1">
-                            <h3>1. Would you like your dog to be around 50 - 75 lbs?
-                                </h3>
-                        </legend>
 
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option value="1">1 (stongly disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (strongly agree)</option>
-                        </select>
-                    </div>
-                </div>
-            </fieldset>
-            <!--/////////Question 2///////////-->
-            <fieldset class="form-group">
-                <div class="row">
-                    <div class="col-sm-12 question2">
-                        <legend class="col-form-label pt-0" id="question2">
-                            <h3>2. Would you like a really big dog?  Over 100 lbs?
-                                </h3>
-                        </legend>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option value="1">1 (stongly disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (strongly agree)</option>
-                        </select>
-                    </div>
-                </div>
-            </fieldset>
-            <!--/////////Question 3///////////-->
-            <fieldset class="form-group">
-                <div class="row">
-                    <div class="col-sm-12 question3">
-                        <legend class="col-form-label pt-0" id="question3">
-                            <h3>3. Would you like to take your dog on long hikes/walks?
-                                </h3>
-                        </legend>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option value="1">1 (stongly disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (strongly agree)</option>
-                        </select>
-                    </div>
-                </div>
-            </fieldset>
-            <!--/////////Question 4///////////-->
-            <fieldset class="form-group">
-                <div class="row">
-                    <div class="col-sm-12 question4">
-                        <legend class="col-form-label pt-0" id="question4">
-                            <h3>4. Do you want a dog that loves the water?
-                                </h3>
-                        </legend>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option value="1">1 (stongly disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (strongly agree)</option>
-                        </select>
-                    </div>
-                </div>
-            </fieldset>
-            <!--/////////Question 5///////////-->
-            <fieldset class="form-group">
-                <div class="row">
-                    <div class="col-sm-12 question5">
-                        <legend class="col-form-label pt-0" id="question5">
-                            <h3>5. Do you want a very loyal dog?
-                                </h3>
-                        </legend>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option value="1">1 (stongly disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (strongly agree)</option>
-                        </select>
-                    </div>
-                </div>
-            </fieldset>
-            <!--/////////Question 6///////////-->
-            <fieldset class="form-group">
-                <div class="row">
-                    <div class="col-sm-12 question6">
-                        <legend class="col-form-label pt-0" id="question6">
-                            <h3>6. I want a very intelligent dog
-                                </h3>
-                        </legend>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option value="1">1 (stongly disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (strongly agree)</option>
-                        </select>
-                    </div>
-                </div>
-            </fieldset>
-            <!--/////////Question 7///////////-->
-            <fieldset class="form-group">
-                <div class="row">
-                    <div class="col-sm-12 question7">
-                        <legend class="col-form-label pt-0" id="question7">
-                            <h3>7. Alergies are a consideration
-                                </h3>
-                        </legend>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option value="1">1 (stongly disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (strongly agree)</option>
-                        </select>
-                    </div>
-                </div>
-            </fieldset>
-            <!--/////////Question 8///////////-->
-            <fieldset class="form-group">
-                <div class="row">
-                    <div class="col-sm-12 question8">
-                        <legend class="col-form-label pt-0" id="question8">
-                            <h3>8. I want a high energy dog
-                                </h3>
-                        </legend>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option value="1">1 (stongly disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (strongly agree)</option>
-                        </select>
-                    </div>
-                </div>
-            </fieldset>
-            <!--/////////Question 9///////////-->
-            <fieldset class="form-group">
-                <div class="row">
-                    <div class="col-sm-12 question9">
-                        <legend class="col-form-label pt-0" id="question9">
-                            <h3>9. I was a social dog
-                                </h3>
-                        </legend>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option value="1">1 (stongly disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (strongly agree)</option>
-                        </select>
-                    </div>
-                </div>
-            </fieldset>
-            <!--/////////Question 10///////////-->
-            <fieldset class="form-group">
-                <div class="row">
-                    <div class="col-sm-12 question10">
-                        <legend class="col-form-label pt-0" id="question10">
-                            <h3>10. I want to be around my dog all the time!
-                                </h3>
-                        </legend>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option value="1">1 (stongly disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (strongly agree)</option>
-                        </select>
-                    </div>
-                </div>
-            </fieldset>
-
-            <div class="form-group row">
-                <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary submit">Find Dogs!</button>
-                </div>
-            </div>
-        </form>
-        <a href="/api/friends">API Dogs list</a>
-    </div>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-        crossorigin="anonymous"></script>
 
     <script type="text/javascript">
-        $(".submit").on("click", function () {
-            event.preventDefault();
-            console.log("tracking the option click");
-            var testArray = [];
-            for (let i = 1; i < 11; i++) {
-                var questionSelector = ".question" + i + " option:selected"
-                console.log("questionSelector: " + questionSelector)
-                var testing = $(questionSelector).val();
-                console.log("where testing goes: " + testing);
-                testArray.push(testing);
-            }
-            console.log("where the array goes: " + testArray);
-            var newDog = {
-                name: $("#inputName").val().trim(),
-                photo: $("#inputImageURL").val().trim(),
-                scores: testArray
-            }
-            console.log(newDog);
-            $.post("/api/friends", newDog,
-                function (data) {
-                    if (data) {
-                        var dogImage = data.photo;
-                        var dogName = data.name;
-                        var modalHtml = "<img src='" + dogImage + "' alt = 'person' > <h2>" + dogName + "</h2>"
-                        $('#exampleModalCenter').on('show.bs.modal', function (event) {
-                            var modal = $(this);
-                            modal.find('.modal-body').html(modalHtml);
-                        })
-                        $("#exampleModalCenter").modal({ show: true });
-                    } else {
-                        alert("something went wrong ...")
-                    }
-                    //clear the form contents
-                    for (let i = 1; i < 11; i++) {
-                        var questionSelector = ".question" + i + " option:selected"
-                        console.log("questionSelector: " + questionSelector)
-                        $(questionSelector).prop("selected", false);
-                    }
-                    $("#inputName").val("");
-                    $("#inputImageURL").val("");
-                });
-            //end click submit button
+        $(document).ready(function () {
+            // On submit button click, validate info, send to server, return match
+            $("#submit-survey").on("click", function (event) {
+                event.preventDefault();
+                // Form validation
+                var name = $('#name').val().trim();
+                var photo = $('#photo').val().trim();
+                if ((name === '' || photo === '')) {
+                    alert('Please enter your name and a link to a photo!')
+                } else {
+                    var newFriend = {
+                        name: $("#name").val().trim(),
+                        photo: $("#photo").val().trim(),
+                        scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
+                    };
+                    console.log(newFriend)
+                    var currentURL = window.location.origin;
+                    //AJAX posts the data to friends API
+                    $.post(currentURL + '/api/friends', newFriend, function (data) {
+                        //SHOULD BE POPULATING POP UP BOX WITH AJAX CALL
+                        $('#match-name').text(data.bestMatchName);
+                        $('#pic').attr("src", data.bestMatchPhoto);
+                    });
+                    $(".modal").modal();
+                }
+            });
         });
     </script>
 </body>
